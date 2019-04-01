@@ -18,7 +18,7 @@ def sendEmail():#发送邮件
     to_addr="******@.com"#收件人的邮箱
     smtp_server="smtp.163.com"#发邮件的邮箱的服务器地址
     msg=MIMEText('IP是:'+ip_addres+'','plain','utf-8')
-    msg['From']=_format_addr('raspberry pi mode 3<%s>'%from_addr)
+    msg['From']=_format_addr('Your_IP<%s>'%from_addr)
     msg['To']=_format_addr('admin<%s>'%to_addr)
     msg['Subject']=Header('来自您的Linux','utf-8').encode()
 
