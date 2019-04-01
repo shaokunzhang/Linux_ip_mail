@@ -1,3 +1,1 @@
-# hello-word
-学习
-test
+获取linux ip，邮件发送
