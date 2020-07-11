@@ -98,14 +98,16 @@ def cs():
     f=open("var.txt","wb")
     pickle.dump(aa,f,0)
     f.close()
-print("请选择\n","1:开始程序  2:参数调整")
-a = int(input())
-if  a==1:
-    f=open("var.txt","rb")
-    bb=pickle.load(f)
-    print(bb)
-    run(bb[0],bb[1],bb[2],bb[3],bb[4],bb[5])
-elif a==2:
-    cs()
-    
+    yx()
+def yx():    
+    print("请选择\n","1:开始程序  2:参数调整")
+    a = int(input())
+    if  a==1:
+        f=open("var.txt","rb")
+        bb=pickle.load(f)
+        print(bb)
+        run(bb[0],bb[1],bb[2],bb[3],bb[4],bb[5])
+    elif a==2:
+        cs()
+yx()    
             
