@@ -27,6 +27,12 @@ def ctrl_a():
     winput.press_key(VK_CONTROL)
     winput.click_key(VK_A)
     winput.release_key(VK_CONTROL)
+def printtime():
+    winput.press_key(VK_CONTROL)
+    winput.press_key(VK_LSHIFT)
+    winput.click_key(VK_OEM_1)
+    winput.release_key(VK_CONTROL)
+    winput.release_key(VK_LSHIFT)
 def run(time_min,time_max,num_x,num_y,deal_x,deal_y):
     print("程序开始")
     time.sleep(1)                      #程序开始
@@ -52,7 +58,7 @@ def run(time_min,time_max,num_x,num_y,deal_x,deal_y):
         winput.click_mouse_button(1)
         time.sleep(0.5)
         winput.click_key(VK_RIGHT)
-        pyperclip.copy(Random_time)
+        pyperclip.copy(printtime)
         paste()       
         winput.click_key(VK_LEFT)      #左键
         winput.click_key(VK_DOWN)      #下键
