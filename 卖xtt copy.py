@@ -7,10 +7,13 @@ from winput.vk_codes import *
 import time
 def copy():
     winput.press_key(VK_CONTROL)
+    time.sleep(0.2)
     winput.click_key(VK_C)
+    time.sleep(0.2)
     winput.release_key(VK_CONTROL)
 def paste():
     winput.press_key(VK_CONTROL)
+    time.sleep(0.2)
     winput.click_key(VK_V)
     winput.release_key(VK_CONTROL)
 def tab():
@@ -30,13 +33,14 @@ def ctrl_a():
 def printtime():
     winput.press_key(VK_CONTROL)
     winput.press_key(VK_LSHIFT)
+    time.sleep(0.1)
     winput.click_key(VK_OEM_1)
     winput.release_key(VK_CONTROL)
     winput.release_key(VK_LSHIFT)
 def run(time_min,time_max,num_x,num_y,deal_x,deal_y):
     print("程序开始")
     time.sleep(1)                      #程序开始
-    winput.set_mouse_pos(1722, 20)     #鼠标切换EXCEL 
+    winput.set_mouse_pos(1702, 111)     #鼠标切换EXCEL 
     winput.click_mouse_button(1)       
     time.sleep(0.5)
     while 1 :                      
@@ -54,12 +58,11 @@ def run(time_min,time_max,num_x,num_y,deal_x,deal_y):
         winput.set_mouse_pos(deal_x,deal_y)  #鼠标点击交易
         winput.click_mouse_button(1)
         time.sleep(1)
-        winput.set_mouse_pos(1726, 20) #切换窗口
+        winput.set_mouse_pos(1702, 111) #切换窗口
         winput.click_mouse_button(1)
         time.sleep(0.5)
         winput.click_key(VK_RIGHT)
-        pyperclip.copy(printtime)
-        paste()       
+        printtime()     
         winput.click_key(VK_LEFT)      #左键
         winput.click_key(VK_DOWN)      #下键
         time.sleep(Random_time)   
